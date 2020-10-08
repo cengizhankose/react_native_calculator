@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, SafeAreaView } from "react-native";
+import { RFPercentage } from "react-native-responsive-fontsize";
 import { styles } from "./styles";
 
 import Row from "../../components/Row";
@@ -11,55 +12,46 @@ export default function CalculatorScreen() {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.resultsContainer}>
-        <Text>2*50*3</Text>
-        <Text>300</Text>
+        <Text style={{ fontSize: RFPercentage(4), color: Colors.lightGray }}>
+          2*50*3
+        </Text>
+        <Text style={{ fontSize: RFPercentage(12), color: Colors.gray }}>
+          300
+        </Text>
       </View>
-      <View
-        style={{ width: "80%", height: 1, backgroundColor: Colors.lightGray }}
-      />
+      <View style={styles.seperator} />
       <View style={styles.buttonsContainer}>
-        <View style={{ flex: 1, marginVertical: "10%" }}>
+        <View style={styles.innerButtonsContainer}>
           <Row>
-            <Button textStyle={{ color: Colors.gray }} value="C" />
-            <Button textStyle={{ color: Colors.gray }} value="+/-" />
-            <Button textStyle={{ color: Colors.gray }} value="%" />
-            <Button textStyle={{ color: Colors.red }} value="/" />
+            <Button textStyle={styles.buttonGray} value="C" />
+            <Button textStyle={styles.buttonGray} value="+/-" />
+            <Button textStyle={styles.buttonGray} value="%" />
+            <Button textStyle={styles.buttonRed} value="/" />
           </Row>
           <Row>
-            <Button textStyle={{ color: Colors.lightGray }} value="7" />
-            <Button textStyle={{ color: Colors.lightGray }} value="8" />
-            <Button textStyle={{ color: Colors.lightGray }} value="9" />
-            <Button textStyle={{ color: Colors.red }} value="x" />
+            <Button textStyle={styles.buttonLightGray} value="7" />
+            <Button textStyle={styles.buttonLightGray} value="8" />
+            <Button textStyle={styles.buttonLightGray} value="9" />
+            <Button textStyle={styles.buttonRed} value="x" />
           </Row>
           <Row>
-            <Button textStyle={{ color: Colors.lightGray }} value="4" />
-            <Button textStyle={{ color: Colors.lightGray }} value="5" />
-            <Button textStyle={{ color: Colors.lightGray }} value="6" />
-            <Button textStyle={{ color: Colors.red }} value="-" />
+            <Button textStyle={styles.buttonLightGray} value="4" />
+            <Button textStyle={styles.buttonLightGray} value="5" />
+            <Button textStyle={styles.buttonLightGray} value="6" />
+            <Button textStyle={styles.buttonRed} value="-" />
           </Row>
           <Row>
-            <Button textStyle={{ color: Colors.lightGray }} value="1" />
-            <Button textStyle={{ color: Colors.lightGray }} value="2" />
-            <Button textStyle={{ color: Colors.lightGray }} value="3" />
-            <Button textStyle={{ color: Colors.red }} value="+" />
+            <Button textStyle={styles.buttonLightGray} value="1" />
+            <Button textStyle={styles.buttonLightGray} value="2" />
+            <Button textStyle={styles.buttonLightGray} value="3" />
+            <Button textStyle={styles.buttonRed} value="+" />
           </Row>
           <Row>
-            <Button textStyle={{ color: Colors.lightGray }} value="00" />
-            <Button textStyle={{ color: Colors.lightGray }} value="0" />
+            <Button textStyle={styles.buttonLightGray} value="00" />
+            <Button textStyle={styles.buttonLightGray} value="0" />
             <Button value="." />
             <Button
-              style={{
-                backgroundColor: Colors.red,
-                shadowColor: Colors.red,
-                shadowOffset: {
-                  width: 0,
-                  height: 6,
-                },
-                shadowOpacity: 0.37,
-                shadowRadius: 7.49,
-
-                elevation: 12,
-              }}
+              style={styles.buttonEqual}
               textStyle={{ color: Colors.white, fontWeight: "bold" }}
               value="="
             />
