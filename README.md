@@ -18,20 +18,24 @@ like a calculator :D
 
 ## Features
 
--Addition
--Subtraction
--Multiplication
--Division
--Percentage
--Negatifier
+-Addition  
+-Subtraction  
+-Multiplication  
+-Division  
+-Percentage  
+-Negatifier  
 -Multiple Operations in true order
 
 ## Dependencies
 
--[React Native](https://reactnative.dev/) -[Redux](https://redux.js.org/) -[react-native-resonsive-fontsize](https://github.com/heyman333/react-native-responsive-fontSize) -[Expo](https://expo.io/) -[redux-thunk](https://github.com/reduxjs/redux-thunk)
+-[React Native](https://reactnative.dev/)  
+-[Redux](https://redux.js.org/)  
+-[react-native-resonsive-fontsize](https://github.com/heyman333/react-native-responsive-fontSize)  
+-[Expo](https://expo.io/)  
+-[redux-thunk](https://github.com/reduxjs/redux-thunk)
 
 ## What the app looks like
 
 ![alt text](https://github.com/cengizhankose/react_native_calculator/blob/main/ss.png)
-![alt text](https://github.com/cengizhankose/react_native_calculator/blob/main/ss1.png)
 ![alt text](https://github.com/cengizhankose/react_native_calculator/blob/main/ss2.png)
+![alt text](https://github.com/cengizhankose/react_native_calculator/blob/main/ss1.png)
