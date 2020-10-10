@@ -14,9 +14,7 @@ export default function CalculatorScreen(props) {
     <View>
       <TouchableOpacity
         style={[styles.mainContainer, props.style]}
-        onPress={() => {
-          Alert.alert(value);
-        }}
+        onPress={props.onPress}
       >
         <Text style={[styles.value, props.textStyle]}>{value}</Text>
       </TouchableOpacity>
