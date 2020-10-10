@@ -7,8 +7,7 @@ import {
   NEGATIVE_PRESSED,
   PERCENTAGE_PRESSED,
 } from "./types";
-
-// Sabit değişkenler
+//Actions
 export const updateCurrentValue = (value, currentValue) => {
   return (dispatch) => {
     if (currentValue === "0") {

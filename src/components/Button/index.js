@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Alert, TouchableOpacity, Text, View } from "react-native";
 import { styles } from "./styles";
 
+//Main Screen Button Component
+
 export default function CalculatorScreen(props) {
   const [value, setValue] = useState("");
 

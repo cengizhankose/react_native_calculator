@@ -2,12 +2,15 @@ import React from "react";
 import { View, Text, SafeAreaView } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
+
 //styling
 import { Colors } from "../../constants/Colors/Colors";
 import { styles } from "./styles";
+
 //components
 import Row from "../../components/Row";
 import Button from "../../components/Button";
+
 //actions
 import {
   updateCurrentValue,
@@ -20,6 +23,7 @@ import {
 function CalculatorScreen(props) {
   return (
     <SafeAreaView style={styles.mainContainer}>
+      {/* Main Screen Results View */}
       <View style={styles.resultsContainer}>
         <Text style={{ fontSize: RFPercentage(4), color: Colors.lightGray }}>
           {props.previousValue}
@@ -28,7 +32,9 @@ function CalculatorScreen(props) {
           {props.currentValue}
         </Text>
       </View>
+      {/* Results View and Buttons View Seperator */}
       <View style={styles.seperator} />
+      {/* Main Screen Buttons View */}
       <View style={styles.buttonsContainer}>
         <View style={styles.innerButtonsContainer}>
           <Row>
@@ -187,12 +193,13 @@ function CalculatorScreen(props) {
     </SafeAreaView>
   );
 }
-
+//Redux Store mapping to main Component as props
 const mapStateToProps = ({ reducer }) => {
   const { currentValue, previousValue } = reducer;
   return { currentValue, previousValue };
 };
 
+//Connecting redux store and action functions
 export default connect(mapStateToProps, {
   updateCurrentValue,
   handleEqual,

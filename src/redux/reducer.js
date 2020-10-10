@@ -8,11 +8,12 @@ import {
   PERCENTAGE_PRESSED,
 } from "./types";
 
+//store inital state
 const initialState = {
   currentValue: "0",
   previousValue: "",
 };
-
+//Reducers
 export default (state = initialState, action) => {
   switch (action.type) {
     case BUTTON_PRESSED:

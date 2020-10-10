@@ -1,3 +1,4 @@
+//Constant app colors
 export const Colors = {
   seperator: "#f7f7f7",
   lightGray: "#bebebe",
